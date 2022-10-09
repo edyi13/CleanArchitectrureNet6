@@ -10,4 +10,13 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\V2\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectrure.Application.UseCases\CleanArchitectrure.Application.UseCases.csproj" />
+    <ProjectReference Include="..\CleanArchitectrure.Persistence\CleanArchitectrure.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

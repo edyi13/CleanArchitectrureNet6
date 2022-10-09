@@ -6,4 +6,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Customers\Commands\" />
+    <Folder Include="Customers\Queries\GetAllWithPaginationCustomerQuery\" />
+    <Folder Include="Users\Commands\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitectrure.Application.Dto\CleanArchitectrure.Application.Dto.csproj" />
+    <ProjectReference Include="..\CleanArchitectrure.Application.Interface\CleanArchitectrure.Application.Interface.csproj" />
+  </ItemGroup>
+
 </Project>
