@@ -51,7 +51,7 @@ namespace CleanArchitectrure.Persistence.Repositories
         public async Task<Customer> GetAsync(string id)
         {
             using var connection = _applicationContext.CreateConnection();
-            var query = "CustomersListWithPagination";
+            var query = "CustomersGetByID";
 
             var parameters = new DynamicParameters();
             parameters.Add("CustomerID", id);
