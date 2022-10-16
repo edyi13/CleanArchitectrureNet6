@@ -8,7 +8,10 @@
 
   <ItemGroup>
     <Folder Include="Events\" />
-    <Folder Include="Commons\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.0.0" />
   </ItemGroup>
 
 </Project>
