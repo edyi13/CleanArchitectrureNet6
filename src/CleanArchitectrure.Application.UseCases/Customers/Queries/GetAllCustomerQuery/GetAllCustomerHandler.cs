@@ -28,7 +28,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllCustom
                 if(customers is not null)
                 {
                     response.Data = _mapper.Map<IEnumerable<CustomerDto>>(customers);
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message = "Query succeed!";
                 }
             }

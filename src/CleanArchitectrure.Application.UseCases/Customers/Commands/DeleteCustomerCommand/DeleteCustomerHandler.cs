@@ -29,7 +29,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Commands.DeleteCusto
                 response.Data = await _unitOfWork.Customers.DeleteAsync(command.CustomerId);
                 if (response.Data)
                 {
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message = "Delete succeed!";
                 }
             }

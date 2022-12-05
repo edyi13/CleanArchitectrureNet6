@@ -25,7 +25,7 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
         public async Task<IActionResult> GetAllAsync()
         {
             var response = await _mediator.Send(new GetAllCustomerQuery());
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }
@@ -37,7 +37,7 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
         public async Task<IActionResult> GetAsync([FromQuery ]string customerId)
         {
             var response = await _mediator.Send(new GetByIdCustomerQuery() { CustomerId = customerId });
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }
@@ -49,7 +49,7 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
         public async Task<IActionResult> GetAllWithPaginationAsync([FromQuery] GetAllWithPaginationCustomerQuery query)
         {
             var response = await _mediator.Send(query);
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }
@@ -64,7 +64,7 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
 
             var response = await _mediator.Send(command);
 
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }
@@ -79,7 +79,7 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
 
             var response = await _mediator.Send(command);
 
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }
@@ -87,14 +87,14 @@ namespace CleanArchitectrure.WebApi.Controllers.V1
             return BadRequest(response);
         }
 
-        [HttpPut("Delete")]
+        [HttpDelete("Delete")]
         public async Task<ActionResult> DeleteAsync([FromQuery] DeleteCustomerCommand command)
         {
             if (command is null) return BadRequest();
 
             var response = await _mediator.Send(command);
 
-            if (response.succcess)
+            if (response.Success)
             {
                 return Ok(response);
             }

@@ -15,19 +15,18 @@ namespace CleanArchitectrure.Persistence.Repositories
             _applicationContext = applicationContext ?? throw new ArgumentNullException(nameof(applicationContext));
         }
 
-        public Task<User> GetAync(string client)
+        public async Task<User> GetAsync(string client)
         {
             using var connection = _applicationContext.CreateConnection();
             var query = "UsersGetByClient";
-
             var parameters = new DynamicParameters();
             parameters.Add("Client", client);
 
-            var user = connection.QuerySingleOrDefaultAsync<User>(query, param: parameters, commandType: CommandType.StoredProcedure);
+            var user = await connection.QuerySingleOrDefaultAsync<User>(query, param: parameters, commandType: CommandType.StoredProcedure);
             return user;
         }
 
-        public async Task<bool> InsertAync(User user)
+        public async Task<bool> InsertAsync(User user)
         {
             using var connection = _applicationContext.CreateConnection();
             var query = "UsersInsert";

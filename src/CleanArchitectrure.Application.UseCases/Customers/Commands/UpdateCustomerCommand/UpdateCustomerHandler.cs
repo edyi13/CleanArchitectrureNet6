@@ -31,7 +31,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Commands.UpdateCusto
                 response.Data = await _unitOfWork.Customers.UpdateAsync(customer);
                 if (response.Data)
                 {
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message = "Update succeed!";
                 }
             }

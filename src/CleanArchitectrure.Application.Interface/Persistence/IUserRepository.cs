@@ -4,7 +4,7 @@ namespace CleanArchitectrure.Application.Interface.Persistence
 {
     public interface IUserRepository
     {
-        Task<User> GetAync(string client);
-        Task<bool> InsertAync(User user);
+        Task<User> GetAsync(string client);
+        Task<bool> InsertAsync(User user);
     }
 }

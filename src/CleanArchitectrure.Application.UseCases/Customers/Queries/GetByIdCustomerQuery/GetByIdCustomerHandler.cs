@@ -27,7 +27,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetByIdCusto
                 if(customer is not null)
                 {
                     response.Data = _mapper.Map<CustomerDto>(customer);
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message = "Query succeed!";
                 }
             }

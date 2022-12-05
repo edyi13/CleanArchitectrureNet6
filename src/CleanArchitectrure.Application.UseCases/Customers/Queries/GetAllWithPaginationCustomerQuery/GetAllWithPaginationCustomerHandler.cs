@@ -37,7 +37,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Queries.GetAllWithPa
                     response.TotalPages = (int)Math.Ceiling(count / (double)request.PageSize);
                     response.TotalCount = count;
                     response.Data =  _mapper.Map<IEnumerable<CustomerDto>>(customers);
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message = "Query succeed!";
                 }
             }

@@ -32,7 +32,7 @@ namespace CleanArchitectrure.Application.UseCases.Customers.Commands.CreateCusto
                 response.Data = await _unitOfWork.Customers.InsertAsync(customer);
                 if (response.Data) 
                 {
-                    response.succcess = true;
+                    response.Success = true;
                     response.Message  = "Create succeed!";
                 }
             }
